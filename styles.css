@@ -1,0 +1,567 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    background: #fbfcff;
+    color: #1f2d3d;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    background: rgba(0, 153, 204, 0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 153, 204, 0.08);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(0, 153, 204, 0.12);
+    box-shadow: 0 8px 24px rgba(19, 67, 92, 0.08);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.nav-logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 153, 204, 0.10));
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #0099cc;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #17405c;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #0099cc;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO ===== */
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(15, 88, 122, 0.62), rgba(15, 88, 122, 0.62)),
+        url('hero-background.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: heroRise 1.4s ease forwards;
+}
+
+.hero-logo {
+    width: 420px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.18));
+}
+
+.hero-subtitle {
+    margin-top: 14px;
+    margin-bottom: 28px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.94);
+    max-width: 700px;
+}
+
+.hero-btn {
+    border-radius: 999px;
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 153, 204, 0.18);
+}
+
+/* ===== BUTTONS ===== */
+
+.whatsapp-btn {
+    display: inline-block;
+    background: #0099cc;
+    color: white;
+    text-decoration: none;
+    padding: 16px 34px;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 153, 204, 0.4);
+    animation: dentalGlow 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    opacity: 0.96;
+}
+
+/* ===== GENERAL SECTIONS ===== */
+
+section {
+    padding: 80px 20px;
+    position: relative;
+}
+
+section:not(#hero):not(#final-cta)::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: rgba(0, 153, 204, 0.12);
+    margin: 0 auto 40px auto;
+}
+
+#sobre-dentista,
+#tratamientos,
+#galeria,
+#ubicacion,
+#final-cta {
+    text-align: center;
+}
+
+#sobre-dentista h2,
+#tratamientos h2,
+#galeria h2,
+#ubicacion h2,
+#final-cta h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #17405c;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#sobre-dentista h2:hover,
+#tratamientos h2:hover,
+#galeria h2:hover,
+#ubicacion h2:hover,
+#final-cta h2:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ===== ABOUT ===== */
+
+#sobre-dentista {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #ffffff, #fbfcff);
+}
+
+.about-text {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #62798c;
+    font-size: 16px;
+}
+
+/* ===== TRATAMIENTOS ===== */
+
+#tratamientos {
+    text-align: center;
+    background: linear-gradient(to bottom, #edf9fd, #fbfcff);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.96);
+    color: #1f2d3d;
+    padding: 32px;
+    width: 230px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid rgba(0, 153, 204, 0.10);
+    box-shadow: 0 12px 30px rgba(19, 67, 92, 0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+#tratamientos.reveal.active .service-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.service-icon {
+    font-size: 34px;
+    margin-bottom: 16px;
+    line-height: 1;
+    opacity: 0.95;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #17405c;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #61798d;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.service-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border: 1px solid rgba(0, 153, 204, 0.18);
+    box-shadow: 0 18px 45px rgba(19, 67, 92, 0.12);
+}
+
+/* ===== GALERIA ===== */
+
+#galeria {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    gap: 24px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(19, 67, 92, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(19, 67, 92, 0.18);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.04);
+}
+
+/* ===== UBICACION ===== */
+
+#ubicacion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#ubicacion p {
+    margin: 5px 0;
+    color: #62798c;
+}
+
+#ubicacion iframe {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0 10px 24px rgba(19, 67, 92, 0.10);
+}
+
+#ubicacion iframe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(19, 67, 92, 0.14);
+}
+
+/* ===== FINAL CTA ===== */
+
+#final-cta {
+    background: linear-gradient(135deg, #0087b8, #0099cc);
+    color: white;
+    margin-top: 40px;
+}
+
+#final-cta h2,
+#final-cta p {
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #17405c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    transition: opacity 0.3s ease;
+}
+
+footer p:hover {
+    opacity: 0.85;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    background: #0099cc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    box-shadow: 0 10px 24px rgba(0, 153, 204, 0.28);
+    z-index: 1200;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 16px 32px rgba(0, 153, 204, 0.36);
+}
+
+/* ===== REVEAL ANIMATIONS ===== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== KEYFRAMES ===== */
+
+@keyframes heroRise {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dentalGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 204, 0.35);
+    }
+
+    70% {
+        box-shadow: 0 0 30px 15px rgba(0, 153, 204, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 204, 0);
+    }
+}
+
+@keyframes floatPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 204, 0.35);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(0, 153, 204, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 204, 0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .nav-logo {
+        width: 100px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 24px;
+        border-radius: 14px;
+        display: none;
+        min-width: 180px;
+        box-shadow: 0 12px 30px rgba(19, 67, 92, 0.12);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-logo {
+        width: 280px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .hero-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    #ubicacion iframe {
+        height: 250px;
+    }
+
+    #final-cta h2 {
+        font-size: 22px;
+    }
+
+    #final-cta p {
+        font-size: 14px;
+    }
+
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+        right: 16px;
+        bottom: 16px;
+    }
+}
