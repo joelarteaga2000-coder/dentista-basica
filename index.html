@@ -1,142 +1,505 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Web para Consultorio Dental | DiSo Web Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILK Dental Studio — La excelencia es nuestra única norma</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="logo.png" class="nav-logo" alt="Logo del consultorio dental">
 
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">
-                ☰
-            </button>
+  <!-- ── CURSOR ─────────────────────────────────────────────── -->
 
-            <ul class="nav-links">
-                <li><a href="#sobre-dentista">Dentista</a></li>
-                <li><a href="#tratamientos">Tratamientos</a></li>
-                <li><a href="#galeria">Consultorio</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="cursor" id="cursor"></div>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <img src="logo.png" class="hero-logo" alt="Logo del consultorio dental">
-                <p class="hero-subtitle">Cuidado dental profesional para una sonrisa sana y confiable.</p>
+  <!-- ── STICKY RESERVE BAR ────────────────────────────────── -->
 
-                <p style="max-width:700px; margin:0 auto 18px auto; color:rgba(255,255,255,0.88); font-size:14px; line-height:1.7;">
-                    Este sitio es un ejemplo de diseño web para consultorios dentales.
-                </p>
-
-                <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20consultorio%20dental%20para%20mi%20negocio" class="whatsapp-btn hero-btn" target="_blank" rel="noopener noreferrer">
-                    Quiero una página como esta
-                </a>
-            </div>
-        </section>
-
-        <section id="sobre-dentista" class="reveal">
-            <h2>Sobre el dentista</h2>
-            <p class="about-text">
-                El Dr. Juan Pérez ofrece atención odontológica profesional enfocada en la prevención,
-                diagnóstico y tratamiento de problemas dentales. Su objetivo es brindar tratamientos
-                seguros, cómodos y personalizados para mejorar la salud bucal y la estética de la sonrisa
-                de cada paciente.
-            </p>
-        </section>
-
-        <section id="tratamientos" class="reveal">
-            <h2>Tratamientos dentales</h2>
-
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">🦷</div>
-                    <h3>Limpieza dental</h3>
-                    <p>Profilaxis profesional para mantener dientes y encías saludables.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Blanqueamiento</h3>
-                    <p>Tratamiento estético para mejorar el color natural de los dientes.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🛠</div>
-                    <h3>Tratamiento de caries</h3>
-                    <p>Restauración dental segura para recuperar la salud de tus piezas.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">😁</div>
-                    <h3>Revisión general</h3>
-                    <p>Evaluación profesional para detectar y prevenir problemas dentales.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" class="reveal">
-            <h2>Consultorio</h2>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="image1.jpg" alt="Consultorio dental" loading="lazy">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Atención odontológica profesional" loading="lazy">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image1.jpg" alt="Espacio del consultorio dental" loading="lazy">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Consulta dental" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section id="ubicacion" class="reveal">
-            <h2>Ubicación</h2>
-            <p>Av. Reforma 123, Ciudad de México</p>
-            <p>Lunes a Viernes · 9:00 AM – 6:00 PM</p>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.123456789!2d-99.1677!3d19.4326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8b123456789%3A0x123456789abcdef!2sMexico%20City!5e0!3m2!1ses!2smx!4v0000000000000"
-                width="100%"
-                height="300"
-                style="border: 0; border-radius: 10px;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
-
-        <section id="final-cta" class="reveal">
-            <h2>¿Quieres una página así para tu consultorio dental?</h2>
-            <p>Te ayudamos a tener una web profesional, moderna y optimizada para generar confianza en tus pacientes.</p>
-            <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20consultorio%20dental%20para%20mi%20negocio" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                Solicitar página
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Demo de diseño web para consultorio dental · DiSo Web Studio</p>
-    </footer>
-
-    <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20consultorio%20dental%20para%20mi%20negocio" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-        💬
+  <div class="reserve-bar" id="reserveBar">
+    <a href="#contacto" class="reserve-line" id="reserveLine">
+      <span class="reserve-text">Reservar consulta privada</span>
+      <span class="reserve-arrow">→</span>
     </a>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="nav-brand">
+        <span class="brand-silk">SILK</span>
+        <span class="brand-sub">Dental Studio</span>
+      </a>
+
+```
+  <nav class="nav-links">
+    <a href="#filosofia" class="nav-link">Filosofía</a>
+    <a href="#tratamientos" class="nav-link">Tratamientos</a>
+    <a href="#doctor" class="nav-link">El Doctor</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
+  </nav>
+
+  <a href="#contacto" class="nav-cta">
+    <span>Reservar</span>
+  </a>
+</div>
+```
+
+  </header>
+
+  <main>
+
+```
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section id="hero" class="hero">
+
+  <!-- Left text column -->
+  <div class="hero-left">
+    <div class="hero-number reveal-fade" data-delay="0">01</div>
+
+    <div class="hero-eyebrow reveal-fade" data-delay="100">
+      Ciudad de México · Polanco
+    </div>
+
+    <h1 class="hero-title reveal-fade" data-delay="200">
+      La excelencia<br>
+      es nuestra<br>
+      <em>única norma.</em>
+    </h1>
+
+    <p class="hero-desc reveal-fade" data-delay="350">
+      Odontología de élite donde la precisión técnica<br>
+      encuentra el refinamiento estético.
+    </p>
+
+    <div class="hero-cta-group reveal-fade" data-delay="480">
+      <a href="#tratamientos" class="btn-line">
+        <span>Descubrir tratamientos</span>
+        <span class="btn-line-fill"></span>
+      </a>
+      <a href="#doctor" class="hero-sub-link">Conocer al Dr. Morales →</a>
+    </div>
+
+    <div class="hero-stat-row reveal-fade" data-delay="600">
+      <div class="hero-stat">
+        <span class="stat-n">15</span>
+        <span class="stat-u">años</span>
+        <span class="stat-l">Excelencia</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="stat-n">2,400</span>
+        <span class="stat-u">+</span>
+        <span class="stat-l">Pacientes</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="stat-n">100</span>
+        <span class="stat-u">%</span>
+        <span class="stat-l">Satisfacción</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right image column — overlay stack -->
+  <div class="hero-right">
+    <div class="hero-img-stack">
+
+      <!-- Background plate -->
+      <div class="img-plate img-plate-bg reveal-scale" data-delay="100"></div>
+
+      <!-- Main photo -->
+      <div class="img-plate img-plate-main reveal-scale" data-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=90&auto=format&fit=crop&fp-x=0.5&fp-y=0.3"
+          alt="SILK Dental Studio"
+          class="hero-img"
+        >
+        <div class="img-grain"></div>
+      </div>
+
+      <!-- Floating label -->
+      <div class="img-label reveal-fade" data-delay="500">
+        <span class="img-label-text">Studio — Polanco</span>
+      </div>
+
+      <!-- Decorative index line -->
+      <div class="img-index reveal-fade" data-delay="600">
+        <div class="img-index-line"></div>
+        <span>MMXXV</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll reveal-fade" data-delay="800">
+    <div class="scroll-track">
+      <div class="scroll-thumb"></div>
+    </div>
+    <span>Scroll</span>
+  </div>
+
+</section>
+
+<!-- ── STRIP ──────────────────────────────────────────────── -->
+<div class="marquee-strip">
+  <div class="marquee-inner" id="marqueeInner">
+    <span>Excelencia Clínica</span><span class="mdot">·</span>
+    <span>Implantología de Precisión</span><span class="mdot">·</span>
+    <span>Estética Dental</span><span class="mdot">·</span>
+    <span>Ortodoncia Invisible</span><span class="mdot">·</span>
+    <span>Carillas de Porcelana</span><span class="mdot">·</span>
+    <span>Blanqueamiento Profesional</span><span class="mdot">·</span>
+    <span>Excelencia Clínica</span><span class="mdot">·</span>
+    <span>Implantología de Precisión</span><span class="mdot">·</span>
+    <span>Estética Dental</span><span class="mdot">·</span>
+    <span>Ortodoncia Invisible</span><span class="mdot">·</span>
+    <span>Carillas de Porcelana</span><span class="mdot">·</span>
+    <span>Blanqueamiento Profesional</span><span class="mdot">·</span>
+  </div>
+</div>
+
+<!-- ── FILOSOFÍA ───────────────────────────────────────────── -->
+<section id="filosofia" class="filosofia-section">
+
+  <div class="filosofia-inner">
+
+    <div class="filosofia-label reveal-fade" data-delay="0">
+      <div class="label-line"></div>
+      <span>02 — Filosofía</span>
+    </div>
+
+    <blockquote class="filosofia-quote reveal-fade" data-delay="150">
+      "En SILK no tratamos dientes.<br>
+      <em>Transformamos vidas.</em>"
+    </blockquote>
+
+    <p class="filosofia-body reveal-fade" data-delay="280">
+      Cada paciente que entra por nuestras puertas merece el mismo nivel de atención que recibe un paciente en las mejores clínicas de Zúrich, Tokio o Nueva York. Nuestro protocolo de diagnóstico tridimensional, combinado con materiales de clase mundial, garantiza resultados que perduran décadas — no años.
+    </p>
+
+    <div class="filosofia-values reveal-fade" data-delay="400">
+      <div class="fv-item">
+        <div class="fv-num">I.</div>
+        <div class="fv-text">
+          <strong>Diagnóstico profundo</strong>
+          <p>Escáner 3D + análisis fotográfico facial completo antes de tocar un instrumento.</p>
+        </div>
+      </div>
+      <div class="fv-item">
+        <div class="fv-num">II.</div>
+        <div class="fv-text">
+          <strong>Materiales de élite</strong>
+          <p>Solo trabajamos con laboratorios certificados y materiales con trazabilidad internacional.</p>
+        </div>
+      </div>
+      <div class="fv-item">
+        <div class="fv-num">III.</div>
+        <div class="fv-text">
+          <strong>Discreción absoluta</strong>
+          <p>Citas privadas. Sin salas de espera comunes. Su tiempo es tan valioso como el nuestro.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ── TRATAMIENTOS — OVERLAY LAYOUT ─────────────────────── -->
+<section id="tratamientos" class="tratamientos-section">
+
+  <div class="trat-header reveal-fade" data-delay="0">
+    <div class="label-line"></div>
+    <span class="trat-label">03 — Tratamientos</span>
+    <h2 class="trat-title">Arte aplicado<br><em>a la sonrisa.</em></h2>
+  </div>
+
+  <!-- Treatment 01 — Carillas -->
+  <div class="trat-item trat-item-a reveal-fade" data-delay="100">
+    <div class="trat-img-wrap">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=85&auto=format&fit=crop" alt="Carillas" class="trat-img">
+      <div class="trat-img-overlay"></div>
+    </div>
+    <div class="trat-info">
+      <span class="trat-num">01</span>
+      <h3 class="trat-name">Carillas de Porcelana</h3>
+      <p class="trat-desc">Laminillas ultrafinas que transforman color, forma y proporción. El resultado es indistinguible del diente natural — excepto que es perfectamente perfecto.</p>
+      <div class="trat-meta">
+        <span>2 visitas · E.Max Ivoclar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Treatment 02 — Implantes -->
+  <div class="trat-item trat-item-b reveal-fade" data-delay="0">
+    <div class="trat-info trat-info-right">
+      <span class="trat-num">02</span>
+      <h3 class="trat-name">Implantología<br>de Precisión</h3>
+      <p class="trat-desc">Guía quirúrgica digital + implantes Nobel Biocare. Sin incisiones innecesarias. Recuperación en 48 horas. Garantía vitalicia en el implante.</p>
+      <div class="trat-meta">
+        <span>Cirugía guiada 3D · Nobel Biocare</span>
+      </div>
+    </div>
+    <div class="trat-img-wrap">
+      <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=85&auto=format&fit=crop" alt="Implantes" class="trat-img">
+      <div class="trat-img-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Treatment 03 — Ortodoncia -->
+  <div class="trat-item trat-item-a reveal-fade" data-delay="100">
+    <div class="trat-img-wrap">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=85&auto=format&fit=crop" alt="Ortodoncia" class="trat-img">
+      <div class="trat-img-overlay"></div>
+    </div>
+    <div class="trat-info">
+      <span class="trat-num">03</span>
+      <h3 class="trat-name">Ortodoncia<br>Invisible</h3>
+      <p class="trat-desc">Invisalign Platinum Elite Provider. Planificación digital completa desde el primer día. Resultados predecibles, tratamiento discreto, sin compromisos en calidad de vida.</p>
+      <div class="trat-meta">
+        <span>Invisalign Platinum Elite · Scaneo digital</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Treatment 04 — Blanqueamiento -->
+  <div class="trat-item trat-item-b reveal-fade" data-delay="0">
+    <div class="trat-info trat-info-right">
+      <span class="trat-num">04</span>
+      <h3 class="trat-name">Blanqueamiento<br>Profesional</h3>
+      <p class="trat-desc">Sistema Philips Zoom de última generación. Hasta 8 tonos de diferencia en una sesión. El protocolo de sensibilidad mínima más avanzado disponible hoy.</p>
+      <div class="trat-meta">
+        <span>Philips Zoom · 90 minutos · 8 tonos</span>
+      </div>
+    </div>
+    <div class="trat-img-wrap">
+      <img src="https://images.unsplash.com/photo-1616391182219-e080b4d1042a?w=800&q=85&auto=format&fit=crop" alt="Blanqueamiento" class="trat-img">
+      <div class="trat-img-overlay"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── DOCTOR — ENTREVISTA DE REVISTA ─────────────────────── -->
+<section id="doctor" class="doctor-section">
+
+  <div class="doctor-inner">
+
+    <div class="doctor-left reveal-scale" data-delay="0">
+      <div class="doctor-img-frame">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=85&auto=format&fit=crop&fp-x=0.5&fp-y=0.2"
+          alt="Dr. Rafael Morales"
+          class="doctor-img"
+        >
+        <!-- Overlay label -->
+        <div class="doctor-img-label">
+          <span>Dr. Rafael Morales</span>
+        </div>
+      </div>
+
+      <!-- Background plate -->
+      <div class="doctor-bg-plate"></div>
+    </div>
+
+    <div class="doctor-right">
+
+      <div class="dr-section-label reveal-fade" data-delay="0">
+        <div class="label-line"></div>
+        <span>04 — El Doctor</span>
+      </div>
+
+      <h2 class="dr-title reveal-fade" data-delay="100">
+        Dr. Rafael<br>
+        <em>Morales Vega</em>
+      </h2>
+
+      <div class="dr-credentials reveal-fade" data-delay="200">
+        <span>UNAM · Universidad de Pensilvania · AACD Fellow</span>
+      </div>
+
+      <!-- Interview format -->
+      <div class="dr-interview">
+
+        <div class="dr-q reveal-fade" data-delay="280">
+          <span class="q-mark">—</span>
+          <p class="q-text">¿Qué significa para usted la odontología de lujo?</p>
+        </div>
+
+        <div class="dr-a reveal-fade" data-delay="340">
+          <p>"El lujo real no está en los materiales ni en el precio. Está en el tiempo. En que un médico se siente frente a usted, entienda su vida, su sonrisa, y diseñe un plan que sea exclusivamente suyo. Eso es lo que ofrezco en SILK."</p>
+        </div>
+
+        <div class="dr-q reveal-fade" data-delay="420">
+          <span class="q-mark">—</span>
+          <p class="q-text">¿Cuál es su diferencia técnica?</p>
+        </div>
+
+        <div class="dr-a reveal-fade" data-delay="480">
+          <p>"Formación dual — México y Estados Unidos. Fellow de la AACD. Más de 800 horas de educación continua en los últimos tres años. Pero lo que más me enorgullece es que mis pacientes vuelven. No porque tengan que hacerlo. Sino porque quieren."</p>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="dr-certs reveal-fade" data-delay="560">
+        <div class="cert-item">
+          <span class="cert-n">UNAM</span>
+          <span class="cert-l">Cirujano Dentista · 2008</span>
+        </div>
+        <div class="cert-div"></div>
+        <div class="cert-item">
+          <span class="cert-n">UPenn</span>
+          <span class="cert-l">Estética Dental · 2012</span>
+        </div>
+        <div class="cert-div"></div>
+        <div class="cert-item">
+          <span class="cert-n">AACD</span>
+          <span class="cert-l">Fellow Accredited · 2018</span>
+        </div>
+      </div>
+
+      <!-- Signature -->
+      <div class="dr-signature reveal-fade" data-delay="640">
+        <svg viewBox="0 0 240 80" class="signature-svg">
+          <path d="M 20 60 C 40 20, 70 10, 100 40 C 120 55, 130 30, 160 35 C 190 40, 210 55, 220 45" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="sig-path"/>
+          <path d="M 80 50 C 85 40, 95 38, 100 48" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" class="sig-path"/>
+        </svg>
+        <span class="sig-caption">Dr. Rafael Morales Vega · AACD Fellow</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────────────────── -->
+<section id="contacto" class="contact-section">
+
+  <div class="contact-inner">
+
+    <div class="contact-left reveal-fade" data-delay="0">
+      <div class="label-line"></div>
+      <span class="trat-label">05 — Consulta privada</span>
+      <h2 class="contact-title">
+        Su sonrisa<br>
+        le está<br>
+        <em>esperando.</em>
+      </h2>
+      <p class="contact-desc">
+        La primera consulta es un encuentro. No una venta. Evaluamos, escuchamos y diseñamos — sin presiones, sin compromisos.
+      </p>
+
+      <div class="contact-info-list">
+        <div class="ci">
+          <span class="ci-label">Ubicación</span>
+          <span class="ci-val">Masaryk 123, Polanco · CDMX</span>
+        </div>
+        <div class="ci">
+          <span class="ci-label">Horario</span>
+          <span class="ci-val">Lunes – Viernes · 9:00 – 19:00</span>
+        </div>
+        <div class="ci">
+          <span class="ci-label">Consulta inicial</span>
+          <span class="ci-val">Diagnóstico completo · $2,500 MXN</span>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5215500000000?text=Hola%2C%20deseo%20agendar%20una%20consulta%20privada%20en%20SILK%20Dental%20Studio."
+         target="_blank"
+         class="contact-wa-btn">
+        <span class="wa-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </span>
+        Agendar vía WhatsApp
+      </contact-wa-btn>
+    </div>
+
+    <div class="contact-right reveal-fade" data-delay="150">
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-field">
+          <input type="text" class="form-input" placeholder=" " id="fName">
+          <label class="form-label" for="fName">Nombre completo</label>
+          <div class="form-line"></div>
+        </div>
+
+        <div class="form-field">
+          <input type="tel" class="form-input" placeholder=" " id="fPhone">
+          <label class="form-label" for="fPhone">Teléfono / WhatsApp</label>
+          <div class="form-line"></div>
+        </div>
+
+        <div class="form-field">
+          <input type="email" class="form-input" placeholder=" " id="fEmail">
+          <label class="form-label" for="fEmail">Correo electrónico</label>
+          <div class="form-line"></div>
+        </div>
+
+        <div class="form-field">
+          <select class="form-input form-select" id="fService">
+            <option value="" disabled selected></option>
+            <option>Carillas de Porcelana</option>
+            <option>Implantología</option>
+            <option>Ortodoncia Invisible</option>
+            <option>Blanqueamiento Profesional</option>
+            <option>Consulta y diagnóstico completo</option>
+            <option>Otro tratamiento</option>
+          </select>
+          <label class="form-label form-label-select" for="fService">Tratamiento de interés</label>
+          <div class="form-line"></div>
+        </div>
+
+        <div class="form-field">
+          <textarea class="form-input form-textarea" placeholder=" " id="fMsg" rows="3"></textarea>
+          <label class="form-label" for="fMsg">Mensaje (opcional)</label>
+          <div class="form-line"></div>
+        </div>
+
+        <button type="submit" class="form-submit" id="formSubmit">
+          <span class="submit-text">Solicitar consulta privada</span>
+          <span class="submit-arrow">→</span>
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+```
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-silk">SILK</span>
+        <span class="brand-sub">Dental Studio</span>
+      </div>
+      <div class="footer-links">
+        <a href="#filosofia">Filosofía</a>
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#doctor">El Doctor</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-copy">
+        © 2026 SILK Dental Studio · Polanco, CDMX
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
